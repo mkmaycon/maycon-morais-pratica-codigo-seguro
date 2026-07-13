@@ -1,72 +1,33 @@
-# CatalogoX API
+# CatálogoX API - Código Seguro
 
-API REST interna desenvolvida para o gerenciamento de produtos utilizados por sistemas corporativos da empresa CatalogoX.
+## Objetivo
 
-A aplicacao fornece operacoes basicas de cadastro, consulta, atualizacao e remocao de produtos, sendo utilizada como backend por ferramentas de estoque e precificacao.
+Corrigir vulnerabilidades de segurança presentes na CatálogoX API utilizando boas práticas de Secure Coding.
 
----
+## Tecnologias
 
-## Funcionalidades
-
-- Cadastro de produtos
-- Listagem de produtos
-- Atualizacao de produtos
-- Remocao de produtos
-
-A aplicacao funciona exclusivamente como API REST, nao possuindo interface grafica.
-
----
-
-## Tecnologias Utilizadas
-
-- Python 3
+- Python
 - Flask
 - SQLite
+- Bandit
 
----
+## Vulnerabilidades Corrigidas
 
-## Como Executar a Aplicacao
+- SQL Injection
+- Uso de MD5
+- Debug ativado
+- Tratamento genérico de exceções
 
-1. Clonar o repositorio
+## Ferramentas
 
-git clone <url-do-repositorio>
-cd catalogox-api
+- Bandit
 
-2. Instalar as dependencias
+## Resultado
 
-pip install -r requirements.txt
+Após as correções, o Bandit retornou:
 
-3. Executar a aplicacao
+No issues identified.
 
-python app.py
+A aplicação permaneceu funcional e com melhorias de segurança.
 
-A API estara disponivel em:
 
-http://127.0.0.1:5000
-
-Na primeira execucao, o banco de dados e inicializado automaticamente.
-
----
-
-## Acesso a API
-
-Todos os endpoints requerem autenticacao via header HTTP:
-
-Authorization: usuario:senha
-
----
-
-## Endpoints Disponiveis
-
-- POST /produtos
-- GET /produtos
-- PUT /produtos/{id}
-- DELETE /produtos/{id}
-
----
-
-## Observacoes
-
-- API desenvolvida para uso interno.
-- Nao possui frontend.
-- Projeto serve como base funcional para integracoes com outros sistemas.
